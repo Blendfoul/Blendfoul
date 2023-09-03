@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/Blendfoul/nx-plugins/compare/react-native-windows-0.2.1...react-native-windows-0.2.2) (2023-09-03)
+
+
+### Bug Fixes
+
+* **react-native-windows:** use rnw cli to patch the react native cli ([932472d](https://github.com/Blendfoul/nx-plugins/commit/932472d335fcb3e7b242ffc68a554352dd1aa4cd))
+
 ## [0.2.1](https://github.com/Blendfoul/nx-plugins/compare/react-native-windows-0.2.0...react-native-windows-0.2.1) (2023-09-03)
 
 
