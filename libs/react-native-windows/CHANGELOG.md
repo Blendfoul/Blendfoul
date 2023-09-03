@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/Blendfoul/blendfoul/compare/react-native-windows-0.1.1...react-native-windows-0.1.2) (2023-09-03)
+
+
+### Bug Fixes
+
+* **react-native-windows:** schema options default values ([9fb2e03](https://github.com/Blendfoul/blendfoul/commit/9fb2e0388887a6b3ddab56d06f046aaecc37b6df))
+
 ## [0.1.1](https://github.com/Blendfoul/blendfoul/compare/react-native-windows-0.1.0...react-native-windows-0.1.1) (2023-09-03)
 
 
