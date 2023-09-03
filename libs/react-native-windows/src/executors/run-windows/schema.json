@@ -2,13 +2,17 @@
   "$schema": "http://json-schema.org/schema",
   "version": 2,
   "title": "Run Windows application",
-  "description": "",
+  "description": "Run Windows target options.",
   "type": "object",
   "properties": {
+    "port": {
+      "type": "number",
+      "description": "Port to run the Metro bundler on. Default: 8081",
+      "default": 8081
+    },
     "release": {
       "type": "boolean",
-      "description": "Specifies a Release build",
-      "default": false
+      "description": "Specifies a Release build"
     },
     "root": {
       "type": "string",
@@ -21,18 +25,15 @@
     },
     "singleProc": {
       "type": "boolean",
-      "description": "Disables multi-proc build",
-      "default": false
+      "description": "Disables multi-proc build"
     },
     "emulator": {
       "type": "boolean",
-      "description": "Deploys the app to an emulator",
-      "default": false
+      "description": "Deploys the app to an emulator"
     },
     "device": {
       "type": "boolean",
-      "description": "Deploys the app to a connected device",
-      "default": false
+      "description": "Deploys the app to a connected device"
     },
     "target": {
       "type": "string",
@@ -40,72 +41,51 @@
     },
     "remoteDebugging": {
       "type": "boolean",
-      "description": "Deploys the app in remote debugging mode.",
-      "default": false
+      "description": "Deploys the app in remote debugging mode."
     },
     "logging": {
       "type": "boolean",
-      "description": "Enables logging.",
-      "default": false
+      "description": "Enables logging."
     },
     "noPackager": {
       "type": "boolean",
-      "description": "Disables the Metro packager.",
-      "default": false
+      "description": "Disables the Metro packager."
     },
     "bundle": {
       "type": "boolean",
-      "description": "Enable Bundle configuration and it would be ReleaseBundle/DebugBundle other than Release/Debug",
-      "default": false
+      "description": "Enable Bundle configuration and it would be ReleaseBundle/DebugBundle other than Release/Debug"
     },
     "noLaunch": {
       "type": "boolean",
-      "description": "Disables launching the app after deployment.",
-      "default": false
+      "description": "Disables launching the app after deployment."
     },
     "noAutolink": {
       "type": "boolean",
-      "description": "Disables autolinking.",
-      "default": false
+      "description": "Disables autolinking."
     },
     "noBuild": {
       "type": "boolean",
-      "description": "Disables building the app.",
-      "default": false
+      "description": "Disables building the app."
     },
     "noDeploy": {
       "type": "boolean",
-      "description": "Disables deploying the app.",
-      "default": false
+      "description": "Disables deploying the app."
     },
     "deployFromLayout": {
       "type": "boolean",
-      "description": "Force deploy from layout, even in release builds",
-      "default": false
+      "description": "Force deploy from layout, even in release builds"
     },
     "info": {
       "type": "boolean",
-      "description": "Dump environment information.",
-      "default": false
+      "description": "Dump environment information."
     },
     "directDebugging": {
       "type": "number",
       "description": "Enable direct debugging on specified port."
     },
-    "useHermes": {
-      "type": "boolean",
-      "description": "Enable Hermes engine.",
-      "default": false
-    },
     "noTelemetry": {
       "type": "boolean",
-      "description": "Disable sending telemetry.",
-      "default": false
-    },
-    "useWinUI3": {
-      "type": "boolean",
-      "description": "Enable WinUI3.",
-      "default": false
+      "description": "Disable sending telemetry."
     },
     "sln": {
       "type": "string",

@@ -13,7 +13,7 @@ export interface ReactNativeRunWindowsOutput {
 
 let childProcess: ChildProcess;
 
-export default async function* runAndroidExecutor(
+export default async function* runWindowsExecutor(
   options: ReactNativeRunWindowsOptions,
   context: ExecutorContext
 ): AsyncGenerator<ReactNativeRunWindowsOutput> {
