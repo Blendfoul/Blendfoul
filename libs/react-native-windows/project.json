@@ -70,7 +70,9 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "conventional",
-        "postTargets": ["react-native-windows:npm", "react-native-windows:github"]
+        "postTargets": ["react-native-windows:github", "react-native-windows:npm"],
+        "push": true,
+        "baseBranch": "master"
       }
     },
     "github": {
@@ -83,7 +85,8 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://npm.pkg.github.com" 
       }
     }
   },
