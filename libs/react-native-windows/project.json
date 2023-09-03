@@ -70,7 +70,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "conventional",
-        "postTargets": ["react-native-windows:github", "react-native-windows:npm"],
+        "postTargets": ["react-native-windows:github"],
         "push": true,
         "baseBranch": "master",
         "skipCommitTypes": ["docs", "chore", "refactor", "build", "ci", "test"]

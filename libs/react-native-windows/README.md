@@ -10,7 +10,7 @@ This plugin adds support for React Native Windows in React Native projects gener
 nx g @blendfoul/react-native-windows:application <name>
 ```
 
-Generator still under development, will not add react-native-windows to the desired application. So far only the executors are working.
+Generator still under development, may not lead to a functional app. So far only the executors are working.
 
 ### Usage with executors
 
@@ -19,7 +19,7 @@ Generator still under development, will not add react-native-windows to the desi
 ```
 
 `project.json`
-````json
+```json
 {
   "targets": {
     "run-windows":{
@@ -46,4 +46,4 @@ Generator still under development, will not add react-native-windows to the desi
     },
   }
 }
-``
+```
