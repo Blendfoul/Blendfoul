@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "title": "Run Macos application",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "release": {
+      "type": "boolean",
+      "description": "Specifies a Release build",
+      "default": false
+    },
+    "root": {
+      "type": "string",
+      "description": "Override the root directory for the windows build which contains the windows folder."
+    },
+    "arch": {
+      "type": "string",
+      "enum": ["x64", "x86", "ARM64"],
+      "description": "Specifies the architecture to build."
+    },
+    "singleProc": {
+      "type": "boolean",
+      "description": "Disables multi-proc build",
+      "default": false
+    },
+    "emulator": {
+      "type": "boolean",
+      "description": "Deploys the app to an emulator",
+      "default": false
+    },
+    "device": {
+      "type": "boolean",
+      "description": "Deploys the app to a connected device",
+      "default": "false"
+    },
+    "target": {
+      "type": "string",
+      "description": "Deploys the app to the specified GUID for a device."
+    },
+    "remoteDebbuging": {
+      "type": "boolean",
+      "description": "Deploys the app in remote debugging mode.",
+      "default": false
+    },
+    "logging": {
+      "type": "boolean",
+      "description": "Enables logging.",
+      "default": false
+    },
+    "noPackager": {
+      "type": "boolean",
+      "description": "Disables the Metro packager.",
+      "default": false
+    },
+    "bundle": {
+      "type": "boolean",
+      "description": "Enable Bundle configuration and it would be ReleaseBundle/DebugBundle other than Release/Debug",
+      "default": false
+    },
+    "noLaunch": {
+      "type": "boolean",
+      "description": "Disables launching the app after deployment.",
+      "default": false
+    },
+    "noAutolink": {
+      "type": "boolean",
+      "description": "Disables autolinking.",
+      "default": false
+    },
+    "noBuild": {
+      "type": "boolean",
+      "description": "Disables building the app.",
+      "default": false
+    },
+    "noDeploy": {
+      "type": "boolean",
+      "description": "Disables deploying the app.",
+      "default": false
+    },
+    "deployFromLayout": {
+      "type": "boolean",
+      "description": "Force deploy from layout, even in release builds",
+      "default": false
+    },
+    "info": {
+      "type": "boolean",
+      "description": "Dump environment information.",
+      "default": false
+    },
+    "directDebugging": {
+      "type": "number",
+      "description": "Enable direct debugging on specified port."
+    },
+    "useHermes": {
+      "type": "boolean",
+      "description": "Enable Hermes engine.",
+      "default": false
+    },
+    "noTelemetry": {
+      "type": "boolean",
+      "description": "Disable sending telemetry.",
+      "default": false
+    }
+  },
+  "required": []
+}

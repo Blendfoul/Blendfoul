@@ -1,0 +1,77 @@
+{
+  "name": "react-native-windows",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/react-native-windows/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react-native-windows",
+        "main": "libs/react-native-windows/src/index.ts",
+        "tsConfig": "libs/react-native-windows/tsconfig.lib.json",
+        "assets": [
+          "libs/react-native-windows/*.md",
+          {
+            "input": "./libs/react-native-windows/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/react-native-windows/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/react-native-windows",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/react-native-windows",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs react-native-windows {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/react-native-windows/**/*.ts",
+          "libs/react-native-windows/package.json",
+          "libs/react-native-windows/executors.json",
+          "libs/react-native-windows/generators.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/react-native-windows/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional"
+      }
+    }
+  },
+  "tags": []
+}

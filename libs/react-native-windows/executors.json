@@ -1,0 +1,24 @@
+{
+  "executors": {
+    "run-windows": {
+      "implementation": "./src/executors/run-windows/executor",
+      "schema": "./src/executors/run-windows/schema.json",
+      "description": "run-windows executor"
+    },
+    "run-macos": {
+      "implementation": "./src/executors/run-macos/executor",
+      "schema": "./src/executors/run-macos/schema.json",
+      "description": "run-macos executor"
+    },
+    "build-windows": {
+      "implementation": "./src/executors/build-windows/executor",
+      "schema": "./src/executors/build-windows/schema.json",
+      "description": "build-windows executor"
+    },
+    "build-macos": {
+      "implementation": "./src/executors/build-macos/executor",
+      "schema": "./src/executors/build-macos/schema.json",
+      "description": "build-macos executor"
+    }
+  }
+}
