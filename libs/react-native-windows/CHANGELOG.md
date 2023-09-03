@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/Blendfoul/nx-plugins/compare/react-native-windows-0.1.0...react-native-windows-0.2.0) (2023-09-03)
+
+
+### Features
+
+* **react-native-windows:** update generator schema ([d1e25a9](https://github.com/Blendfoul/nx-plugins/commit/d1e25a91827eadc227ce2e465475c3f4c6eeb1ee))
+
 ## 0.1.0 (2023-09-03)
 
 
