@@ -70,11 +70,15 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "conventional",
-        "postTargets": ["my-project:npm", "my-project:github"]
+        "postTargets": ["react-native-windows:npm", "react-native-windows:github"]
       }
     },
     "github": {
-      "executor": "@jscutlery/semver:github"
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
     },
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
