@@ -32,7 +32,7 @@
     "device": {
       "type": "boolean",
       "description": "Deploys the app to a connected device",
-      "default": "false"
+      "default": false
     },
     "target": {
       "type": "string",
