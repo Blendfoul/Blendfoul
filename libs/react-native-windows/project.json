@@ -72,7 +72,8 @@
         "preset": "conventional",
         "postTargets": ["react-native-windows:github", "react-native-windows:npm"],
         "push": true,
-        "baseBranch": "master"
+        "baseBranch": "master",
+        "skipCommitTypes": ["docs", "chore", "refactor", "build", "ci", "test"]
       }
     },
     "github": {
@@ -85,8 +86,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "registry": "https://npm.pkg.github.com" 
+        "access": "public"
       }
     }
   },
