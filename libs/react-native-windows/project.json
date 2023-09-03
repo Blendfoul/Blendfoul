@@ -74,11 +74,7 @@
       }
     },
     "github": {
-      "executor": "@jscutlery/semver:github",
-      "options": {
-        "tag": "${tag}",
-        "notes": "${notes}"
-      }
+      "executor": "@jscutlery/semver:github"
     },
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
