@@ -1,9 +1,14 @@
 {
   "generators": {
     "application": {
-      "factory": "./src/generators/application/generator",
-      "schema": "./src/generators/application/schema.json",
-      "description": "application generator"
+      "factory": "./src/generators/app-windows/generator",
+      "schema": "./src/generators/app-windows/schema.json",
+      "description": "windows application generator"
+    },
+    "app-macos": {
+      "factory": "./src/generators/app-macos/generator",
+      "schema": "./src/generators/app-macos/schema.json",
+      "description": "macos application generator"
     }
   }
 }

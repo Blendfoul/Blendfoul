@@ -1,6 +1,6 @@
 import { joinPathFragments, names, Tree } from '@nx/devkit';
 import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { ApplicationGeneratorSchema } from '../schema';
+import { ApplicationGeneratorSchema } from '../app-windows/schema';
 
 export interface NormalizedSchema extends ApplicationGeneratorSchema {
   className: string; // app name in class name
