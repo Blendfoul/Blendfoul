@@ -3,10 +3,10 @@ export function createRunTargets() {
     "run-windows":{
       "executor": "@blendfoul/react-native-windows:run-windows",
       "dependsOn": ["ensure-symlink", "sync-deps"],
-      defaultConfiguration: "debug",
+      "defaultConfiguration": "debug",
       "configurations": {
         "release": {
-          release: true,
+          "release": true,
         },
         "debug": {
         },
@@ -15,14 +15,14 @@ export function createRunTargets() {
     "run-macos":{
       "executor": "@blendfoul/react-native-windows:run-macos",
       "dependsOn": ["ensure-symlink", "sync-deps"],
-      defaultConfiguration: "debug",
+      "defaultConfiguration": "debug",
       "configurations": {
         "release": {
-          release: true,
+          "release": true
         },
         "debug": {
-        },
-      },
+        }
+      }
     },
   };
 }

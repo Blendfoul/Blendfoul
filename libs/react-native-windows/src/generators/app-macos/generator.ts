@@ -1,6 +1,5 @@
 import {
   addDependenciesToPackageJson,
-  addProjectConfiguration,
   formatFiles,
   generateFiles,
   runTasksInSerial,
@@ -11,7 +10,8 @@ import * as path from 'path';
 import { AppMacosGeneratorSchema } from './schema';
 import { runSymlink } from '@nx/react-native/src/utils/symlink-task';
 import { createRunTargets } from '../utils/create-run-targets';
-import { normalizeOptions } from '../utils/normalize-options';
+import { runPodInstall } from '../utils/pod-install-task';
+import { NormalizedSchema, normalizeOptions } from '../utils/normalize-options';
 
 export async function appMacosGenerator(
   tree: Tree,
@@ -24,10 +24,12 @@ export async function appMacosGenerator(
   const symlinkTask = runSymlink(tree.root, options.appProjectRoot);
 
   const pathForFilesToCopy = path.join(__dirname, 'files');
+
+  const podInstallTask = podInstall(tree, options);
   
   generateFiles(tree, pathForFilesToCopy, options.appProjectRoot, options);
   
-  updateProjectConfiguration(tree, options.projectNameAndRootFormat, {
+  updateProjectConfiguration(tree, options.projectName, {
     root: options.appProjectRoot,
     targets: {
       ...createRunTargets(),
@@ -36,7 +38,7 @@ export async function appMacosGenerator(
 
   await formatFiles(tree);
 
-  return runTasksInSerial(updateDependenciesTask, symlinkTask);
+  return runTasksInSerial(updateDependenciesTask, symlinkTask, podInstallTask);
 }
 
 function updateDependencies(host: Tree) {
@@ -47,6 +49,14 @@ function updateDependencies(host: Tree) {
     },
     {}
   );
+}
+
+function podInstall(
+  tree: Tree,
+  options: NormalizedSchema,
+) { 
+  const macosDirectory = path.join(tree.root, options.appProjectRoot, 'macos');
+  return runPodInstall({ macosDirectory, install: true, });
 }
 
 export default appMacosGenerator;

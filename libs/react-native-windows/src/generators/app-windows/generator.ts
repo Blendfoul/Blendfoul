@@ -26,7 +26,7 @@ export async function applicationGenerator(
   
   generateFiles(tree, pathForFilesToCopy, options.appProjectRoot, options);
   
-  updateProjectConfiguration(tree, options.projectNameAndRootFormat, {
+  updateProjectConfiguration(tree, options.projectName, {
     root: options.appProjectRoot,
     targets: {
       ...createRunTargets(),
